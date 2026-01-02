@@ -4,9 +4,9 @@ pipeline {
         maven 'maven_3_9_11'
     }
     stages{
-        stage('Build Maven'){
+        stage('Maven Build'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/brajus/RBS/tree/main/rbs-avail-api']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/brajus/main/rbs-avail-api']]])
                 sh 'mvn clean install'
             }
         }

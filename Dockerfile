@@ -9,7 +9,7 @@ WORKDIR /app
 COPY target/*.jar rbs-avail-api.jar
 
 # Expose the port your Spring Boot app runs on (default is 8080)
-EXPOSE 8081
+EXPOSE 8080
 
 # Command to run the application when the container starts
 ENTRYPOINT ["java", "-jar", "rbs-avail-api.jar"]

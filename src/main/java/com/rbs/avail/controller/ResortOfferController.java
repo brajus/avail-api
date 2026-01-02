@@ -28,6 +28,5 @@ public class ResortOfferController {
 		List<ResortOfferResponseDTO> response = offerService.getOffersByPkgCode(requestDTO);
 		return ResponseEntity.ok().body(response);
 	}
-	
-	
+
 }
